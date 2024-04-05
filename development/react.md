@@ -6,32 +6,54 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- l'état (_state_) pour contrôler l'affichage d'un composant ❌ / ✔️
-- les composants enfants et les _props_ qu'on leur passe ❌ / ✔️
-- le déclenchement d'instructions en fonction des actions de l'utilisateur ❌ / ✔️
-- le déclenchement d'instructions en fonction de l'étape du cycle de vie du composant ou du changement de valeur de ses props ❌ / ✔️
+- l'état (_state_) pour contrôler l'affichage d'un composant ✔️
+- les composants enfants et les _props_ qu'on leur passe ✔️
+- le déclenchement d'instructions en fonction des actions de l'utilisateur ✔️
+- le déclenchement d'instructions en fonction de l'étape du cycle de vie du composant ou du changement de valeur de ses props ✔️
 - l'usage d'un reducer (_useReducer_) pour gérer un état composé dans un composant
-- l'état stocké dans un composant avec un _context provider_ et accessible dans ses descendants via `useContext` ❌ / ✔️
+- l'état stocké dans un composant avec un _context provider_ et accessible dans ses descendants via `useContext` ✔️
 
 ## 💻 J'utilise
 
-### Un exemple personnel commenté ❌ / ✔️
+### Un exemple personnel commenté ✔️
 
-### Utilisation dans un projet ❌ / ✔️
+```
+import React from "react";
 
-[lien github](...)
+import Layout from "../components/Layout";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import type { AppProps } from "next/app";
 
-Description :
+import "../styles/globals.css";
 
-### Utilisation en production si applicable❌ / ✔️
+export default function App({ Component, pageProps }: AppProps) {
+  const queryClient = new QueryClient();
 
-[lien du projet](...)
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </QueryClientProvider>
+  );
+}
+```
 
-Description :
+### Utilisation dans un projet ✔️
 
-### Utilisation en environement professionnel ❌ / ✔️
+[lien github](https://github.com/SylvainLx/Projet_3_MasterWild/blob/main/frontend/src/pages/Home.jsx)
 
-Description :
+Description : page home avec l'utilisation en react du useContext, useState, useEffect et affichage qui change en fonction du user
+
+### Utilisation en production si applicable ✔️
+
+[lien du projet](https://deco-evasion.fr)
+
+Description : site web créer par mes soins d'une décoratrice interieur, projet en React/NextJS/Typescript/Firebase
+
+### Utilisation en environement professionnel ✔️
+
+Description : utilisation de react sur l'alternance dans le milieu professionnel au quotidien
 
 ## 🌐 J'utilise des ressources
 
@@ -42,7 +64,7 @@ Description :
 
 ## 🚧 Je franchis les obstacles
 
-### Point de blocage ❌ / ✔️
+### Point de blocage ❌
 
 Description:
 

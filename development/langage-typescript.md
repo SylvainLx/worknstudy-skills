@@ -6,28 +6,64 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- l'intéret de TypeScript dans l'IDE ❌ / ✔️
-- les types de bases ❌ / ✔️
-- comment et pourquoi étendre une interface ❌ / ✔️
-- les classes et les decorators ❌ / ✔️
+- l'intéret de TypeScript dans l'IDE ✔️
+- les types de bases ✔️
+- comment et pourquoi étendre une interface ✔️
+- les classes et les decorators ✔️
 
 ## 💻 J'utilise
 
-### Un exemple personnel commenté ❌ / ✔️
+### Un exemple personnel commenté ✔️
 
-### Utilisation dans un projet ❌ / ✔️
+```
+type Props = {
+  title: string;
+  ads: AdCardProps[];
+};
+export default function AdCards({ title, ads }: Props) {
+  const [cart, setCart] = useState<number>(0);
 
-[lien github](...)
+  return (
+    <>
+      <h2>{title}</h2>
+      <p>Total: {cart}</p>
+      <section className={styles["recent-ads"]}>
+        {ads.map((ad) => (
+          <div key={ad.id}>
+            <AdCard
+              imgUrl={ad.imgUrl}
+              link={`/ads/${ad.id}`}
+              price={ad.price}
+              title={ad.title}
+              key={ad.title}
+            />
+            <button
+              className={styles.button}
+              onClick={() => setCart(cart + ad.price)}
+            >
+              Ajouter au panier
+            </button>
+          </div>
+        ))}
+      </section>
+    </>
+  );
+}
+```
 
-Description :
+### Utilisation dans un projet ✔️
 
-### Utilisation en production si applicable❌ / ✔️
+[lien github](https://github.com/SylvainLx/Youcode/)
 
-[lien du projet](...)
+Description : Tutoriel en Next, Typescript
 
-Description :
+### Utilisation en production si applicable ✔️
 
-### Utilisation en environement professionnel ❌ / ✔️
+[lien du projet](https://sylvainleguay.fr)
+
+Description : Site de mon portfolio
+
+### Utilisation en environement professionnel ✔️
 
 Description :
 
@@ -40,7 +76,7 @@ Description :
 
 ## 🚧 Je franchis les obstacles
 
-### Point de blocage ❌ / ✔️
+### Point de blocage ❌
 
 Description:
 
