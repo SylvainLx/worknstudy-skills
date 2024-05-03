@@ -6,10 +6,9 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- les différences avec l'architecture monolithique ❌ / ✔️
-- la communication asynchrone entre services ❌ / ✔️
-- le deploiement d'un cluster ❌ / ✔️
-
+- les différences avec l'architecture monolithique ✔️
+- la communication asynchrone entre services ❌
+- le deploiement d'un cluster ❌
 
 ## 💻 J'utilise
 
@@ -17,7 +16,7 @@
 
 ### Utilisation dans un projet ❌ / ✔️
 
-[lien github](...)
+[lien github](https://github.com/WildCodeSchool/2402-ws-cda-jaune/blob/main/the-good-corner/nginx.conf)
 
 Description :
 
